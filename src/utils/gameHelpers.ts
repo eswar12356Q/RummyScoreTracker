@@ -155,8 +155,11 @@ export const gameHelpers = {
     const eliminatedPlayers = gameHelpers.getEliminatedPlayers(players);
     const winner = gameHelpers.getGameWinner(players);
 
+    // Check if any player has reached or exceeded the game type score
+    const hasPlayerReachedTarget = players.some(p => p.currentScore >= gameType);
+
     return {
-      isCompleted: activePlayers.length <= 1,
+      isCompleted: activePlayers.length <= 1 || hasPlayerReachedTarget,
       winner,
       activePlayerCount: activePlayers.length,
       eliminatedPlayerCount: eliminatedPlayers.length,
