@@ -18,7 +18,6 @@ export default defineConfig({
         manualChunks: undefined
       }
     },
-    minify: 'terser',
     cssMinify: true
   }
 })
