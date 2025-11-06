@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { CreateRoomRequest, JoinRoomRequest } from '../../shared/src/types';
 import CreateRoomModal from './Room/CreateRoomModal';
 import RoomList from './Room/RoomList';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 
 interface Room {
   id: string;
