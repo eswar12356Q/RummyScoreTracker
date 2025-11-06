@@ -16,29 +16,26 @@ const Input: React.FC<InputProps> = ({
   required = false,
   ...rest
 }) => {
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = e.target.value;
+  // Handle react-hook-form onChange - it might receive a string or an event
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement> | string) => {
+    if (!onChange) return;
 
-    if (type === 'number') {
-      // Allow empty input or valid numbers within range
-      if (newValue === '' || (!isNaN(Number(newValue)) &&
-          (min === undefined || Number(newValue) >= min) &&
-          (max === undefined || Number(newValue) <= max))) {
-        onChange(newValue);
-      }
+    if (typeof e === 'string') {
+      // react-hook-form passed the value directly
+      onChange(e);
     } else {
-      onChange(newValue);
-    }
-  };
+      // Regular HTML input event
+      const newValue = e.target.value;
 
-  // Handle react-hook-form onChange
-  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (typeof onChange === 'function') {
-      // Check if this is react-hook-form onChange (receives string directly)
-      if (typeof e === 'string') {
-        onChange(e);
+      if (type === 'number') {
+        // Allow empty input or valid numbers within range
+        if (newValue === '' || (!isNaN(Number(newValue)) &&
+            (min === undefined || Number(newValue) >= min) &&
+            (max === undefined || Number(newValue) <= max))) {
+          onChange(newValue);
+        }
       } else {
-        handleChange(e);
+        onChange(newValue);
       }
     }
   };
