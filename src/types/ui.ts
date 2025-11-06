@@ -9,8 +9,8 @@ export interface ButtonProps {
 }
 
 export interface InputProps {
-  value: string;
-  onChange: (value: string) => void;
+  value?: string;
+  onChange?: ((value: string) => void);
   placeholder?: string;
   type?: 'text' | 'number' | 'email';
   disabled?: boolean;
@@ -20,6 +20,7 @@ export interface InputProps {
   min?: number;
   max?: number;
   required?: boolean;
+  [key: string]: any; // Allow additional props for react-hook-form
 }
 
 export interface CardProps {
