@@ -17,8 +17,8 @@ export interface InputProps {
   error?: string;
   label?: string;
   className?: string;
-  min?: number;
-  max?: number;
+  min?: number | string;
+  max?: number | string;
   required?: boolean;
   [key: string]: any; // Allow additional props for react-hook-form
 }
