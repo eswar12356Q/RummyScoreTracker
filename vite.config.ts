@@ -7,5 +7,18 @@ export default defineConfig({
   server: {
     port: 3000,
     host: true
+  },
+  preview: {
+    port: 3001,
+    host: true
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    },
+    minify: 'terser',
+    cssMinify: true
   }
 })
