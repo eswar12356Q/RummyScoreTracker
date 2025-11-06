@@ -29,9 +29,12 @@ const Input: React.FC<InputProps> = ({
 
       if (type === 'number') {
         // Allow empty input or valid numbers within range
+        const minNum = min !== undefined ? Number(min) : undefined;
+        const maxNum = max !== undefined ? Number(max) : undefined;
+
         if (newValue === '' || (!isNaN(Number(newValue)) &&
-            (min === undefined || Number(newValue) >= min) &&
-            (max === undefined || Number(newValue) <= max))) {
+            (minNum === undefined || Number(newValue) >= minNum) &&
+            (maxNum === undefined || Number(newValue) <= maxNum))) {
           onChange(newValue);
         }
       } else {
