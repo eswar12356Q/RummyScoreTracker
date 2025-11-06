@@ -1,9 +1,16 @@
 import { GameRoom, Player, RoomSettings, CreateRoomRequest, JoinRoomRequest } from '../../../shared/src/types';
 import { database } from '../models/database';
 import { v4 as uuidv4 } from 'uuid';
-import { short } from 'short-unique-id';
 
-const uid = short({ length: 6 });
+// Generate 6-character room code
+const generateRoomCode = (): string => {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  let result = '';
+  for (let i = 0; i < 6; i++) {
+    result += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return result;
+};
 
 export class RoomService {
   // Create a new game room
