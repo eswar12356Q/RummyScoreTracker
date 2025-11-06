@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { GameState, GameType, Player, Round, GameSetupConfig } from '../types';
+import { GameState, Player, Round, GameSetupConfig } from '../types';
 
 interface GameStore extends GameState {
   // Actions
