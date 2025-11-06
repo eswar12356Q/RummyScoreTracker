@@ -1,0 +1,21 @@
+{
+  "name": "Rummy Score Tracker",
+  "short_name": "Rummy Scores",
+  "description": "Track scores for pool rummy games (101, 201, 301) with 2-6 players",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f9fafb",
+  "theme_color": "#22c55e",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["games", "utilities"],
+  "lang": "en",
+  "scope": "/",
+  "prefer_related_applications": false
+}
