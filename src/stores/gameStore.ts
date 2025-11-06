@@ -262,21 +262,5 @@ export const useGameStore = create<GameStore>()((set, get) => ({
 
         set({ players: updatedPlayers });
       },
-    }),
-    {
-      name: 'rummy-game-store',
-      partialize: (state) => ({
-        id: state.id,
-        gameType: state.gameType,
-        players: state.players,
-        currentRound: state.currentRound,
-        isGameActive: state.isGameActive,
-        roundHistory: state.roundHistory,
-        gameStarted: state.gameStarted,
-        createdAt: state.createdAt,
-        lastPlayed: state.lastPlayed,
-        isCompleted: state.isCompleted,
-      }),
-    }
-  )
+    })
 );
