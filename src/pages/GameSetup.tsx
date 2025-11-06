@@ -27,7 +27,6 @@ const GameSetup: React.FC = () => {
     },
   });
 
-  const selectedGameType = watch('gameType');
   const selectedPlayerCount = watch('playerCount');
 
   const gameTypes: { value: GameType; label: string; description: string }[] = [
