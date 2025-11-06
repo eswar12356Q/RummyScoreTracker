@@ -144,7 +144,7 @@ const RoundScoreEntry: React.FC<RoundScoreEntryProps> = ({
               type="number"
               placeholder="Enter score"
               value={scores[player.id] || ''}
-              onChange={(value) => handleScoreChange(player.id, value)}
+              onChange={(value: string) => handleScoreChange(player.id, value)}
               error={errors[player.id]}
               min={0}
               max={999}
