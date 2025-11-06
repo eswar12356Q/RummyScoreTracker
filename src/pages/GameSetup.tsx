@@ -158,6 +158,9 @@ const GameSetup: React.FC = () => {
                     label={`Player ${i + 1} Name`}
                     placeholder={`Enter name for Player ${i + 1}`}
                     value={watch(`playerNames.${i}`)}
+                    onChange={(value) => setValue(`playerNames.${i}`, value)}
+                    error={errors.playerNames?.[i]?.message}
+                    required
                     {...register(`playerNames.${i}`, {
                       required: 'Player name is required',
                       maxLength: {
@@ -172,7 +175,6 @@ const GameSetup: React.FC = () => {
                         return duplicates.length === 0 || 'Player names must be unique';
                       },
                     })}
-                    error={errors.playerNames?.[i]?.message}
                   />
                 ))}
               </div>
