@@ -164,7 +164,7 @@ export const gameHelpers = {
   },
 
   // Export helpers
-  exportGameAsText: (players: Player[], rounds: Round[], gameType: GameType): string => {
+  exportGameAsText: (players: Player[], rounds: Round[]): string => {
     const tableData = gameHelpers.generateTableData(players, rounds);
     const date = new Date().toLocaleDateString();
 
