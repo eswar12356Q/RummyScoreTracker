@@ -157,11 +157,23 @@ const GameSetup: React.FC = () => {
                     key={i}
                     label={`Player ${i + 1} Name`}
                     placeholder={`Enter name for Player ${i + 1}`}
-                    value={watch(`playerNames.${i}`)}
-                    onChange={(value) => setValue(`playerNames.${i}`, value)}
-                    error={errors.playerNames?.[i]?.message}
-                    required
                     {...register(`playerNames.${i}`, {
+                      required: 'Player name is required',
+                      maxLength: {
+                        value: 20,
+                        message: 'Name cannot exceed 20 characters',
+                      },
+                      validate: (value, allValues) => {
+                        const names = allValues.playerNames?.slice(0, selectedPlayerCount) || [];
+                        const duplicates = names.filter((name, index) =>
+                          name === value && names.indexOf(name) !== index
+                        );
+                        return duplicates.length === 0 || 'Player names must be unique';
+                      },
+                      onChange: (e) => setValue(`playerNames.${i}`, e.target.value),
+                    })}
+                    error={errors.playerNames?.[i]?.message}
+                  />
                       required: 'Player name is required',
                       maxLength: {
                         value: 20,
