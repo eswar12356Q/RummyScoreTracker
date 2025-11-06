@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import { GameSetupConfig, GameType } from '../types';
 import { useGameStore } from '../stores/gameStore';
 import { Button, Input, Card } from '../components/common';
-import { Game, Users, Trophy } from 'lucide-react';
+import { Target, Users, Trophy } from 'lucide-react';
 
 interface GameSetupFormData {
   gameType: GameType;
