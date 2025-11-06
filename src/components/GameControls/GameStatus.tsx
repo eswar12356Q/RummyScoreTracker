@@ -17,7 +17,6 @@ const GameStatus: React.FC<GameStatusProps> = ({
   players,
   gameType,
   currentRound,
-  isGameActive,
   isCompleted,
 }) => {
   const navigate = useNavigate();
