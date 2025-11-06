@@ -124,7 +124,7 @@ const RoundScoreEntry: React.FC<RoundScoreEntryProps> = ({
                   onClick={() => handleDropPlayer(player.id)}
                   className="text-orange-600 border-orange-300 hover:bg-orange-50"
                 >
-                  <UserDown className="w-4 h-4 mr-1" />
+                  <UserX className="w-4 h-4 mr-1" />
                   Drop
                 </Button>
 
