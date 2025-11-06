@@ -157,6 +157,7 @@ const GameSetup: React.FC = () => {
                     key={i}
                     label={`Player ${i + 1} Name`}
                     placeholder={`Enter name for Player ${i + 1}`}
+                    value={watch(`playerNames.${i}`) || ''}
                     {...register(`playerNames.${i}`, {
                       required: 'Player name is required',
                       maxLength: {
