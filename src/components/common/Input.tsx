@@ -62,13 +62,14 @@ const Input: React.FC<InputProps> = ({
       <input
         type={type}
         value={value}
-        onChange={handleChange}
+        onChange={handleFormChange}
         placeholder={placeholder}
         disabled={disabled}
         className={inputClasses}
         min={min}
         max={max}
         required={required}
+        {...rest}
       />
       {error && (
         <p className="text-sm text-danger-600">{error}</p>
