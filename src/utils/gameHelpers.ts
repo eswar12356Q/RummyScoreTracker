@@ -66,7 +66,6 @@ export const gameHelpers = {
 
   // Table display
   generateTableData: (players: Player[], rounds: Round[]) => {
-    const activePlayers = gameHelpers.getActivePlayers(players);
 
     // Create rows for each round
     const roundRows = rounds.map((round, index) => {
