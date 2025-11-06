@@ -10,7 +10,6 @@ interface GameStatusProps {
   players: Player[];
   gameType: GameType;
   currentRound: number;
-  isGameActive: boolean;
   isCompleted: boolean;
 }
 
