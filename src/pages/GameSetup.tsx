@@ -60,7 +60,6 @@ const GameSetup: React.FC = () => {
   };
 
   const handlePlayerCountChange = (count: number) => {
-    setPlayerCount(count);
     setValue('playerCount', count);
   };
 
