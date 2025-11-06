@@ -15,7 +15,7 @@ const generateRoomCode = (): string => {
 export class RoomService {
   // Create a new game room
   async createRoom(request: CreateRoomRequest): Promise<{ room: GameRoom; player: Player }> {
-    const roomId = uid.rnd();
+    const roomId = generateRoomCode();
     const playerId = uuidv4();
     const now = new Date();
 
