@@ -36,9 +36,7 @@ const calculateSecondHighestScore = (players: Player[]): number => {
   return scores[1] || 0;
 };
 
-export const useGameStore = create<GameStore>()(
-  persist(
-    (set, get) => ({
+export const useGameStore = create<GameStore>()((set, get) => ({
       // Initial state
       id: '',
       gameType: 101,
