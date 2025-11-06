@@ -3,7 +3,7 @@ import { Player } from '../../types';
 import { useGameStore } from '../../stores/gameStore';
 import { Button, Input, Card } from '../common';
 import { gameHelpers } from '../../utils/gameHelpers';
-import { Plus, UserDown, Trophy } from 'lucide-react';
+import { Plus, UserX, Trophy } from 'lucide-react';
 
 interface RoundScoreEntryProps {
   players: Player[];
