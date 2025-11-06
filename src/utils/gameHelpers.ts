@@ -168,7 +168,7 @@ export const gameHelpers = {
     const tableData = gameHelpers.generateTableData(players, rounds);
     const date = new Date().toLocaleDateString();
 
-    let output = `Rummy Score Tracker - ${gameType} Point Game\n`;
+    let output = `Rummy Score Tracker Game\n`;
     output += `Date: ${date}\n`;
     output += `Players: ${players.map(p => p.name).join(', ')}\n`;
     output += `Rounds: ${rounds.length}\n\n`;
