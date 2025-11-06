@@ -17,7 +17,6 @@ const GameSetup: React.FC = () => {
   const navigate = useNavigate();
   const initializeGame = useGameStore((state) => state.initializeGame);
   const [useCustomNames, setUseCustomNames] = useState(false);
-  const [playerCount, setPlayerCount] = useState(2);
 
   const { register, handleSubmit, watch, setValue, formState: { errors } } = useForm<GameSetupFormData>({
     defaultValues: {
