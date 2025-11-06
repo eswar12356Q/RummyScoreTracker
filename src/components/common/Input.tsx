@@ -14,6 +14,7 @@ const Input: React.FC<InputProps> = ({
   min,
   max,
   required = false,
+  ...rest
 }) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;
@@ -27,6 +28,18 @@ const Input: React.FC<InputProps> = ({
       }
     } else {
       onChange(newValue);
+    }
+  };
+
+  // Handle react-hook-form onChange
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (typeof onChange === 'function') {
+      // Check if this is react-hook-form onChange (receives string directly)
+      if (typeof e === 'string') {
+        onChange(e);
+      } else {
+        handleChange(e);
+      }
     }
   };
 
