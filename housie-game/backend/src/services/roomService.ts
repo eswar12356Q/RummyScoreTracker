@@ -1,9 +1,9 @@
 import { GameRoom, Player, RoomSettings, CreateRoomRequest, JoinRoomRequest } from '../../../shared/src/types';
 import { database } from '../models/database';
 import { v4 as uuidv4 } from 'uuid';
-import { ShortUniqueId } from 'short-unique-id';
+import { short } from 'short-unique-id';
 
-const uid = new ShortUniqueId({ length: 6 });
+const uid = short({ length: 6 });
 
 export class RoomService {
   // Create a new game room
