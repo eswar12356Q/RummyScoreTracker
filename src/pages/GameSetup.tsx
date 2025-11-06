@@ -87,7 +87,7 @@ const GameSetup: React.FC = () => {
           {/* Game Type Selection */}
           <Card>
             <div className="flex items-center mb-4">
-              <Game className="w-5 h-5 text-primary-600 mr-2" />
+              <Target className="w-5 h-5 text-primary-600 mr-2" />
               <h2 className="text-xl font-semibold text-gray-900">Game Type</h2>
             </div>
 
