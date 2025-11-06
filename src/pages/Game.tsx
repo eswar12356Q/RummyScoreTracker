@@ -76,7 +76,6 @@ const Game: React.FC = () => {
           players={players}
           gameType={gameType}
           currentRound={currentRound}
-          isGameActive={isGameActive}
           isCompleted={isCompleted}
         />
 
