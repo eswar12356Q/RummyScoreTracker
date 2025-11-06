@@ -1,1 +1,1 @@
-# RummyScoreTracker
+Rummy Score Tracker Demo
