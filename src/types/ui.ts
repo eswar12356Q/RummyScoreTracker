@@ -10,7 +10,7 @@ export interface ButtonProps {
 
 export interface InputProps {
   value?: string;
-  onChange?: ((value: string) => void);
+  onChange?: ((value: string) => void) | ((e: any) => void);
   placeholder?: string;
   type?: 'text' | 'number' | 'email';
   disabled?: boolean;
