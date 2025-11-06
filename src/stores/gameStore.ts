@@ -1,5 +1,4 @@
 import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
 import { GameState, GameType, Player, Round, GameSetupConfig } from '../types';
 
 interface GameStore extends GameState {
